@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://insure-landing-seven.vercel.app/">
+    <a href="https://space-travel-wine.vercel.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/HermanLD/">
+    <a href="https://github.com/HermanLD/space-travel">
       Solution
     </a>
     <span> | </span>
@@ -37,13 +37,13 @@
 
 ## Overview
 
-![screenshot](./images/insure-screenshot.png)
+![screenshot](./images/space-travel-screenshot.png)
 
-A landing page for Insure.
+A Space travel website.
 
 - Got to use the negative margin technigue for the overlapping hero photo.
 - Manipulating the DOM working with tailwindcss and vanilla javascript.
-- Becoming more efficient at setting up eleventy.
+- Becoming more efficient at setting up multi-page site.
 - Responsive CSS Grid layout.
 
 ### Built With
@@ -65,10 +65,10 @@ $ git clone https://github.com/HermanLD/
 $ npm install
 
 # Compiles and hot-reloads Eleventy for development
-$ npm run start
+$ npm run dev
 
 # Run tailwind CLI watch mode
-$ npm run dev
+$ npm run css:dev
 
 # Compiles and minifies for production
 $ npm run build
