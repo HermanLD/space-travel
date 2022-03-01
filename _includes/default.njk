@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      {% block title %}Does it work?{% endblock %}
+    </title>
+    <meta charset="UTF-8"/>
+    {% if description %}
+      <meta name="description" content="{{ description }}"/>
+    {% endif %}
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+    <link rel="icon" href="./images/shared/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css?v={% version %}"/>
+    <script defer="true" src="/js/index.js?v={% version %}}"></script>
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <header class="grid grid-cols-nav-mobile fixed mt-0 xl:grid-cols-nav-desktop xl:mt-10 w-full">
+      {# Desktop logo #}
+      <a class="hidden xl:block self-center justify-self-center" href="/"><img src="./images/shared/logo.svg" alt="Brand logo"></a>
+
+      {# Container #}
+      <div class="nav-decor relative grid justify-center items-center grid-cols-6 py-6 md:py-0 md:grid-cols-12">
+        <a class="w-10 col-start-1 ml-6 flex justify-center" href="/"><img class="block w-10 xl:hidden" src="./images/shared/logo.svg" alt="Brand logo"></a>
+
+        {# Decor Bar ::before #}
+
+        <button class="flex justify-center relative z-50 col-end-[-1] md:hidden" aria-controls="main-nav" aria-expanded="false">
+          <img class="object-fit" src="/images/shared/icon-hamburger.svg" alt="Closed menu icon">
+          <img class="object-fit hidden" src="/images/shared/icon-close.svg" alt="Open menu icon">
+        </button>
+
+        {# Nav with dropdown #}
+        <nav class="absolute top-0 right-0 w-full h-screen col-[3_/_-1] flex justify-start translate-x-full md:justify-center md:translate-x-0 md:static md:col-start-5 md:col-span-8 md:w-auto md:h-auto lg:pl-20 xl:justify-end bg-glass" id="main-nav">
+          <ul class="flex flex-col w-full md:w-auto pt-28 md:pt-0 items-start tracking-wide font-sans-cond text-base text-white uppercase md:items-center md:gap-12 md:flex-row ">
+            <li class="w-full md:w-auto">
+              <a class="numbered-nav w-full md:w-auto inline-block py-6 pl-6 md:pl-0 md:py-9" data-is-active="false" href="/">
+                <span class="inline-block md:hidden xl:inline-block" aria-hidden="true">00</span>home</a>
+            </li>
+            <li class="w-full md:w-auto">
+              <a class="numbered-nav w-full md:w-auto inline-block py-6 pl-6 md:pl-0 md:py-9" data-is-active="false" href="/destinations">
+                <span class="inline-block md:hidden xl:inline-block" aria-hidden="true">01</span>destinations</a>
+            </li>
+            <li class="w-full md:w-auto">
+              <a class="numbered-nav w-full md:w-auto inline-block py-6 pl-6 md:pl-0 md:py-9" data-is-active="false" href="/crew">
+                <span class="inline-block md:hidden xl:inline-block" aria-hidden="true">02</span>crew</a>
+            </li>
+            <li class="w-full md:w-auto">
+              <a class="numbered-nav w-full md:w-auto inline-block py-6 pl-6 md:pl-0 md:py-9" data-is-active="false" href="/technology">
+                <span class="inline-block md:hidden xl:inline-block" aria-hidden="true">03</span>techology</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      {# Desktop glass BG extention #}
+      <div class="hidde bg-glass xl:block"></div>
+    </header>
+    <main class="grid grid-cols-nav-mobile h-screen w-full text-center bg-home-mobile bg-cover bg-no-repeat md:bg-home-tablet xl:grid-cols-nav-desktop xl:bg-home-desktop">
+      {% block content %}
+        {{ content | safe }}
+      {% endblock %}
+    </main>
+  </body>
+</html>

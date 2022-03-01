@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-decor::before {
+    content: "";
+
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    left: 0;
+    width: 42%;
+    height: 1px;
+    background-color: theme(colors.low-white);
+
+    @apply hidden xl:block;
+  }
+
+  .numbered-nav {
+    position: relative;
+  }
+
+  .numbered-nav::before,
+  .numbered-nav::after {
+    content: "";
+    @apply hidden absolute;
+  }
+
+  .numbered-nav[data-is-active="false"]::before,
+  .numbered-nav::before {
+    @apply bottom-0 left-0 w-full h-1 bg-transparent md:bg-gray;
+  }
+
+  .numbered-nav[data-is-active="false"]::after,
+  .numbered-nav::after {
+    @apply top-0 right-0 h-full w-1 bg-gray md:bg-transparent;
+  }
+
+  .numbered-nav[data-is-active="true"]::before {
+    @apply bg-transparent md:bg-white;
+  }
+
+  .numbered-nav[data-is-active="true"]::after {
+    @apply bg-white md:bg-transparent;
+  }
+
+  .numbered-nav[data-is-active="true"]::before,
+  .numbered-nav[data-is-active="true"]::after,
+  .numbered-nav:hover::before,
+  .numbered-nav:hover::after {
+    @apply block;
+  }
+
+  .numbered-nav span {
+    @apply font-bold mr-3;
+  }
+
+  .numbered-heading {
+    @apply text-head-5 tracking-wide;
+  }
+
+  .numbered-heading span {
+    @apply font-bold mr-[1em];
+  }
+
+  .explore-btn {
+    /* 20px --> 32px */
+    font-size: clamp(1.25rem, 1.9vw + 0.5rem, 2rem);
+
+    @apply h-[7.5em] w-[7.5em] flex justify-center items-center bg-white rounded-full uppercase font-serif;
+  }
+
+  .explore-btn:hover {
+    box-shadow: 0px 0px 0px 2em theme("colors.low-white");
+  }
+}
+
+@layer utilities {
+  .bg-glass {
+    background-color: theme("colors.low-dark");
+  }
+  @supports (
+    (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))
+  ) {
+    .bg-glass {
+      background-color: theme("colors.low-white");
+
+      -webkit-backdrop-filter: blur(15px);
+      backdrop-filter: blur(15px);
+    }
+  }
+}
