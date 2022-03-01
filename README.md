@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Insure Landing Page</h1>
+<h1 align="center">Space Travel</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="https://www.frontendmentor.io" target="_blank">frontendmentor.io</a>.
