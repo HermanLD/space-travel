@@ -1,19 +1,21 @@
 {% extends "_includes/default.njk" %}
 {% block title %}Space Tours | Home{% endblock %}
 {% block content %}
-  <div class="cols-start-1 flex flex-col justify-between items-center px-6 pt-32 pb-hero-bottom text-white col-span-full xl:col-auto xl:col-start-2 xl:px-0 xl:flex-row xl:text-left xl:items-end">
-    <div>
-      <h1 class="text-head-1 font-serif uppercase">
-        <span class="block text-head-5 tracking-wide">so, you want to travel to</span >space
-      </h1>
-      <p class="text-body font-sans leading-loose lg:mb-20 lg:max-w-[887px] xl:max-w-[444px] xl:mb-0">
-        Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
-      </p>
+  <main class="grid grid-cols-nav-mobile h-screen w-full text-center bg-home-mobile bg-cover bg-no-repeat md:bg-home-tablet xl:grid-cols-nav-desktop xl:bg-home-desktop">
+    <div class="cols-start-1 flex flex-col justify-between items-center px-6 pt-32 pb-hero-bottom text-white col-span-full xl:col-auto xl:col-start-2 xl:px-0 xl:flex-row xl:text-left xl:items-end">
+      <div>
+        <h1 class="text-head-1 font-serif uppercase">
+          <span class="block text-head-5 tracking-wide">so, you want to travel to</span >space
+        </h1>
+        <p class="text-body font-sans leading-loose lg:mb-20 lg:max-w-[887px] xl:max-w-[444px] xl:mb-0">
+          Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
+        </p>
+      </div>
+      <div>
+        <a class="explore-btn" to="/">
+          <div class="text-dark">Explore</div>
+        </a>
+      </div>
     </div>
-    <div>
-      <a class="explore-btn" to="/">
-        <div class="text-dark">Explore</div>
-      </a>
-    </div>
-  </div>
+  </main>
 {% endblock %}

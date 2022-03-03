@@ -10,22 +10,22 @@
     {% endif %}
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-    <link rel="icon" href="./images/shared/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="/images/shared/logo.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css?v={% version %}"/>
-    <script defer="true" src="/js/index.js?v={% version %}}"></script>
+    <script defer="true" src="/js/index.js?v={% version %}"></script>
     {% block head %}{% endblock %}
   </head>
   <body>
     <header class="grid grid-cols-nav-mobile fixed mt-0 xl:grid-cols-nav-desktop xl:mt-10 w-full">
       {# Desktop logo #}
-      <a class="hidden xl:block self-center justify-self-center" href="/"><img src="./images/shared/logo.svg" alt="Brand logo"></a>
+      <a class="hidden xl:block self-center justify-self-center" href="/"><img src="/images/shared/logo.svg" alt="Brand logo"></a>
 
       {# Container #}
       <div class="nav-decor relative grid justify-center items-center grid-cols-6 py-6 md:py-0 md:grid-cols-12">
-        <a class="w-10 col-start-1 ml-6 flex justify-center" href="/"><img class="block w-10 xl:hidden" src="./images/shared/logo.svg" alt="Brand logo"></a>
+        <a class="w-10 col-start-1 ml-6 flex justify-center" href="/"><img class="block w-10 xl:hidden" src="/images/shared/logo.svg" alt="Brand logo"></a>
 
         {# Decor Bar ::before #}
 
@@ -56,14 +56,11 @@
           </ul>
         </nav>
       </div>
-
       {# Desktop glass BG extention #}
       <div class="hidde bg-glass xl:block"></div>
     </header>
-    <main class="grid grid-cols-nav-mobile h-screen w-full text-center bg-home-mobile bg-cover bg-no-repeat md:bg-home-tablet xl:grid-cols-nav-desktop xl:bg-home-desktop">
-      {% block content %}
-        {{ content | safe }}
-      {% endblock %}
-    </main>
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
   </body>
 </html>

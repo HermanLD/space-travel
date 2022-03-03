@@ -2,9 +2,50 @@
 {% block title %}Space Tours | Crew{% endblock %}
 {% block content %}
   <main class="h-screen w-full">
-    <div class="container">
+    <div>
       <h1 class="numbered-heading">
         <span>02</span>Meet your crew</h1>
+
+      <div class="dest-slider" data-selected-item="crew-1">
+        <img data-tag="crew-1" src="/images/destination/image-moon.png" alt="Image of the Moon.">
+        <img data-tag="crew-2" src="/images/destination/image-europa.png" alt="Image of the moon Europa.">
+        <img data-tag="crew-3" src="/images/destination/image-mars.png" alt="Image of the planet Mars.">
+        <img data-tag="crew-4" src="/images/destination/image-titan.png" alt="Image of the moon Titan.">
+        {# ctlr #}
+        <div class="crew-slider-ctrl">
+          <ul class="flex gap-2">
+            <li>
+              <input type="radio" name="place" value="moon" id="crew-1" checked="true">
+              <label class="crew-ctrl-tab text-white inline-block" for="crew-1">11</label>
+            </li>
+            <li>
+              <input type="radio" name="place" value="europa" id="crew-2">
+              <label class="crew-ctrl-tab text-white inline-block" for="crew-2">12</label>
+            </li>
+            <li>
+              <input type="radio" name="place" value="mars" id="crew-3">
+              <label class="crew-ctrl-tab text-white inline-block" for="crew-3">13</label>
+            </li>
+            <li>
+              <input type="radio" name="place" value="titan" id="crew-4">
+              <label class="crew-ctrl-tab text-white inline-block" for="crew-4">14</label>
+            </li>
+          </ul>
+        </div>
+        {# Details #}
+        <div data-tag="crew-1">
+          <h2>Moon</h2>
+        </div>
+        <div data-tag="crew-2">
+          <h2>Europa</h2>
+        </div>
+        <div data-tag="crew-3">
+          <h2>Mars</h2>
+        </div>
+        <div data-tag="crew-4">
+          <h2>Titan</h2>
+        </div>
+      </div>
     </div>
   </main>
 {% endblock %}

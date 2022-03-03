@@ -3,20 +3,8 @@
 @tailwind utilities;
 
 @layer components {
-  .nav-decor::before {
-    content: "";
-
-    position: absolute;
-    z-index: 9999;
-    top: 50%;
-    left: 0;
-    width: 42%;
-    height: 1px;
-    background-color: theme(colors.low-white);
-
-    @apply hidden xl:block;
-  }
-
+  /* *Numbered Navigation Links */
+  /* *------------------------- */
   .numbered-nav {
     position: relative;
   }
@@ -56,6 +44,8 @@
     @apply font-bold mr-3;
   }
 
+  /* *Numbered Heading */
+  /* *---------------- */
   .numbered-heading {
     @apply text-head-5 tracking-wide;
   }
@@ -64,6 +54,8 @@
     @apply font-bold mr-[1em];
   }
 
+  /* *Explore Button */
+  /* *-------------- */
   .explore-btn {
     /* 20px --> 32px */
     font-size: clamp(1.25rem, 1.9vw + 0.5rem, 2rem);
@@ -73,6 +65,39 @@
 
   .explore-btn:hover {
     box-shadow: 0px 0px 0px 2em theme("colors.low-white");
+  }
+
+  /* *Sliders */
+  /* *------------------ */
+  [data-slider-tag="item-1"],
+  [data-slider-tag="item-2"],
+  [data-slider-tag="item-3"],
+  [data-slider-tag="item-4"] {
+    @apply hidden;
+  }
+
+  [data-slider-selected="item-1"] [data-slider-tag="item-1"],
+  [data-slider-selected="item-2"] [data-slider-tag="item-2"],
+  [data-slider-selected="item-3"] [data-slider-tag="item-3"],
+  [data-slider-selected="item-4"] [data-slider-tag="item-4"] {
+    @apply block;
+  }
+
+  .dest-ctrl-tab {
+    @apply relative;
+  }
+
+  .dest-ctrl-tab::before {
+    content: "";
+    @apply absolute bottom-0 left-0 w-full h-[2px] bg-transparent;
+  }
+
+  .dest-ctrl-tab:hover::before {
+    @apply bg-low-white;
+  }
+
+  input:checked + .dest-ctrl-tab::before {
+    @apply bg-white;
   }
 }
 
@@ -89,5 +114,17 @@
       -webkit-backdrop-filter: blur(15px);
       backdrop-filter: blur(15px);
     }
+  }
+
+  .nav-decor::before {
+    content: "";
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    left: 0;
+    width: 42%;
+    height: 1px;
+
+    @apply bg-low-white hidden xl:block;
   }
 }

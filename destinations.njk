@@ -1,22 +1,48 @@
 {% extends "_includes/default.njk" %}
 {% block title %}Space Tours | Destinations{% endblock %}
 {% block content %}
-  <main class="h-screen w-full">
-    <div class="container">
+  <main class="h-screen w-full text-white bg-dest-mobile bg-cover bg-no-repeat md:bg-dest-tablet xl:bg-dest-desktop">
+    <div>
       <h1 class="numbered-heading">
         <span>01</span>Pick your destination</h1>
 
-      <div>
-        <img src="./images/destination/image-moon.png" alt="Image of the Moon.">
-        <img src="./images/destination/image-europa.png" alt="Image of the moon Europa.">
-        <img src="./images/destination/image-mars.png" alt="Image of the planet Mars.">
-        <img src="./images/destination/image-titan.png" alt="Image of the moon Titan.">
-        <div>
-          {# ctlr #}
-          {# Details #}
+      <div class="dest-slider" data-slider-selected="item-1">
+        <img data-slider-tag="item-1" src="/images/destination/image-moon.png" alt="Image of the Moon.">
+        <img data-slider-tag="item-2" src="/images/destination/image-europa.png" alt="Image of the moon Europa.">
+        <img data-slider-tag="item-3" src="/images/destination/image-mars.png" alt="Image of the planet Mars.">
+        <img data-slider-tag="item-4" src="/images/destination/image-titan.png" alt="Image of the moon Titan.">
+        {# ctlr #}
+        <div class="dest-slider-ctrl flex items-center justify-center">
+          <ul class="flex gap-2">
+            <li>
+              <input class="sr-only" type="radio" name="destinations" value="item-1" id="place-moon" checked="true">
+              <label class="dest-ctrl-tab text-white inline-block uppercase" for="place-moon">moon</label>
+            </li>
+            <li>
+              <input class="sr-only" type="radio" name="destinations" value="item-2" id="place-europa">
+              <label class="dest-ctrl-tab text-white inline-block uppercase" for="place-europa">europa</label>
+            </li>
+            <li>
+              <input class="sr-only" type="radio" name="destinations" value="item-3" id="place-mars">
+              <label class="dest-ctrl-tab text-white inline-block uppercase" for="place-mars">mars</label>
+            </li>
+            <li>
+              <input class="sr-only" type="radio" name="destinations" value="item-4" id="place-titan">
+              <label class="dest-ctrl-tab text-white inline-block uppercase" for="place-titan">titan</label>
+            </li>
+          </ul>
+        </div>
+        {# Details #}
+        <div data-slider-tag="item-1">
           <h2>Moon</h2>
+        </div>
+        <div data-slider-tag="item-2">
           <h2>Europa</h2>
+        </div>
+        <div data-slider-tag="item-3">
           <h2>Mars</h2>
+        </div>
+        <div data-slider-tag="item-4">
           <h2>Titan</h2>
         </div>
       </div>
