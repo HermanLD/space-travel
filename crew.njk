@@ -1,49 +1,61 @@
 {% extends "_includes/default.njk" %}
 {% block title %}Space Tours | Crew{% endblock %}
 {% block content %}
-  <main class="h-screen w-full">
+  <main class="grid-cols-nav-mobile w-full text-white pt-24 xl:pt-24 bg-crew-mobile bg-cover bg-no-repeat md:bg-crew-tablet xl:h-screen xl:grid-cols-nav-desktop xl:bg-crew-desktop">
     <div>
-      <h1 class="numbered-heading">
+      <h1 class="numbered-heading mb-header-bottom text-head-4 text-center xl:text-left uppercase">
         <span>02</span>Meet your crew</h1>
 
-      <div class="dest-slider" data-selected-item="crew-1">
-        <img data-tag="crew-1" src="/images/destination/image-moon.png" alt="Image of the Moon.">
-        <img data-tag="crew-2" src="/images/destination/image-europa.png" alt="Image of the moon Europa.">
-        <img data-tag="crew-3" src="/images/destination/image-mars.png" alt="Image of the planet Mars.">
-        <img data-tag="crew-4" src="/images/destination/image-titan.png" alt="Image of the moon Titan.">
+      <div class="crew-slider" data-slider-selected="item-1">
+        <img data-slider-tag="item-1" src="/images/crew/image-douglas-hurley.png" alt="Douglas Hurley">
+        <img data-slider-tag="item-2" src="/images/crew/image-mark-shuttleworth.png" alt="Mark Shuttleworth">
+        <img data-slider-tag="item-3" src="/images/crew/image-victor-glover.png" alt="Victor Glover">
+        <img data-slider-tag="item-4" src="/images/crew/image-anousheh-ansari.png" alt="Anousheh Ansari">
         {# ctlr #}
-        <div class="crew-slider-ctrl">
-          <ul class="flex gap-2">
+        <div class="crew-slider-ctrl flex items-center justify-center">
+          <ul class="flex text-base xl:text-[2rem]">
             <li>
-              <input type="radio" name="place" value="moon" id="crew-1" checked="true">
-              <label class="crew-ctrl-tab text-white inline-block" for="crew-1">11</label>
+              <input class="sr-only" type="radio" name="crew" value="item-1" id="crew-1" checked="true">
+              <label class="crew-ctrl-tab block p-[0.5em]" for="crew-1">
+                <span class="block w-[0.5em] h-[0.5em] rounded-full bg-low-white"></span></label>
             </li>
             <li>
-              <input type="radio" name="place" value="europa" id="crew-2">
-              <label class="crew-ctrl-tab text-white inline-block" for="crew-2">12</label>
+              <input class="sr-only" type="radio" name="crew" value="item-2" id="crew-2">
+              <label class="crew-ctrl-tab block p-[0.5em]" for="crew-2">
+                <span class="block w-[0.5em] h-[0.5em] rounded-full bg-low-white"></span></label>
             </li>
             <li>
-              <input type="radio" name="place" value="mars" id="crew-3">
-              <label class="crew-ctrl-tab text-white inline-block" for="crew-3">13</label>
+              <input class="sr-only" type="radio" name="crew" value="item-3" id="crew-3">
+              <label class="crew-ctrl-tab block p-[0.5em]" for="crew-3">
+                <span class="block w-[0.5em] h-[0.5em] rounded-full bg-low-white"></span></label>
             </li>
             <li>
-              <input type="radio" name="place" value="titan" id="crew-4">
-              <label class="crew-ctrl-tab text-white inline-block" for="crew-4">14</label>
+              <input class="sr-only" type="radio" name="crew" value="item-4" id="crew-4">
+              <label class="crew-ctrl-tab block p-[0.5em]" for="crew-4">
+                <span class="block w-[0.5em] h-[0.5em] rounded-full bg-low-white"></span></label>
             </li>
           </ul>
         </div>
         {# Details #}
-        <div data-tag="crew-1">
-          <h2>Moon</h2>
+        <div data-slider-tag="item-1" class="text-center">
+          <h2>
+            <span class="block">Commander</span>Douglas Hurley</h2>
+          <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
         </div>
-        <div data-tag="crew-2">
-          <h2>Europa</h2>
+        <div data-slider-tag="item-2" class="text-center">
+          <h2>
+            <span class="block">Mission Specialist</span>Mark Shuttleworth</h2>
+          <p>Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.</p>
         </div>
-        <div data-tag="crew-3">
-          <h2>Mars</h2>
+        <div data-slider-tag="item-3" class="text-center">
+          <h2>
+            <span class="block">Pilot</span>Victor Glover</h2>
+          <p>Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.</p>
         </div>
-        <div data-tag="crew-4">
-          <h2>Titan</h2>
+        <div data-slider-tag="item-4" class="text-center">
+          <h2>
+            <span class="block">Flight Engineer</span>Anousheh Ansari</h2>
+          <p>Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.</p>
         </div>
       </div>
     </div>

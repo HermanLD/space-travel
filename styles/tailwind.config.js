@@ -6,6 +6,8 @@ module.exports = {
       spacing: {
         // 48px --> 152px
         "hero-bottom": "clamp(3rem, 8vw + 1.25rem, 9.5rem)",
+        // 32px --> 64px
+        "header-bottom": "clamp(2rem, 5vw + 0.5rem, 4rem)",
       },
       fontFamily: {
         serif: ["Bellefair", "serif"],
@@ -45,6 +47,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         "nav-desktop": "167px 1fr 167px",
+        "tech-desktop": "167px 1fr",
         "nav-mobile": "1fr",
       },
       backgroundImage: {

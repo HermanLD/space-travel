@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer components {
-  /* *Numbered Navigation Links */
-  /* *------------------------- */
+  /* * Numbered Navigation Links */
+  /* *-------------------------- */
   .numbered-nav {
     position: relative;
   }
@@ -44,18 +44,18 @@
     @apply font-bold mr-3;
   }
 
-  /* *Numbered Heading */
-  /* *---------------- */
+  /* * Numbered Heading */
+  /* *----------------- */
   .numbered-heading {
     @apply text-head-5 tracking-wide;
   }
 
   .numbered-heading span {
-    @apply font-bold mr-[1em];
+    @apply font-bold mr-[1em] text-gray;
   }
 
-  /* *Explore Button */
-  /* *-------------- */
+  /* * Explore Button */
+  /* *--------------- */
   .explore-btn {
     /* 20px --> 32px */
     font-size: clamp(1.25rem, 1.9vw + 0.5rem, 2rem);
@@ -67,7 +67,7 @@
     box-shadow: 0px 0px 0px 2em theme("colors.low-white");
   }
 
-  /* *Sliders */
+  /* * Sliders */
   /* *------------------ */
   [data-slider-tag="item-1"],
   [data-slider-tag="item-2"],
@@ -83,8 +83,9 @@
     @apply block;
   }
 
+  /*? Destination tabs */
   .dest-ctrl-tab {
-    @apply relative;
+    @apply relative z-10 text-primary inline-block uppercase;
   }
 
   .dest-ctrl-tab::before {
@@ -96,8 +97,30 @@
     @apply bg-low-white;
   }
 
+  input:checked + .dest-ctrl-tab {
+    @apply text-white;
+  }
+
   input:checked + .dest-ctrl-tab::before {
     @apply bg-white;
+  }
+
+  /*? Crew tabs */
+  .crew-ctrl-tab:hover span {
+    @apply bg-gray;
+  }
+
+  input:checked + .crew-ctrl-tab span {
+    @apply bg-white;
+  }
+
+  /*? Tech tabs */
+  .tech-ctrl-tab {
+    @apply flex justify-center items-center w-[2.5em] h-[2.5em] text-white border-low-white bg-transparent border-solid border-[2px] hover:border-gray rounded-full;
+  }
+
+  input:checked + .tech-ctrl-tab {
+    @apply bg-white border-white text-black;
   }
 }
 

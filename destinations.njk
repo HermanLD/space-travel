@@ -1,49 +1,109 @@
 {% extends "_includes/default.njk" %}
 {% block title %}Space Tours | Destinations{% endblock %}
 {% block content %}
-  <main class="h-screen w-full text-white bg-dest-mobile bg-cover bg-no-repeat md:bg-dest-tablet xl:bg-dest-desktop">
-    <div>
-      <h1 class="numbered-heading">
+  <main class="grid grid-cols-nav-mobile w-full pt-24 md:pt-32 text-white bg-dest-mobile bg-cover bg-fixed bg-no-repeat md:bg-dest-tablet h-screen xl:grid-cols-nav-desktop xl:bg-dest-desktop">
+    <div class="max-w-xl mx-auto xl:mx-0 xl:col-start-2">
+      <h1 class="numbered-heading mb-header-bottom font-sans-cond text-primary text-head-4 text-center sm:text-left uppercase">
         <span>01</span>Pick your destination</h1>
 
-      <div class="dest-slider" data-slider-selected="item-1">
-        <img data-slider-tag="item-1" src="/images/destination/image-moon.png" alt="Image of the Moon.">
-        <img data-slider-tag="item-2" src="/images/destination/image-europa.png" alt="Image of the moon Europa.">
-        <img data-slider-tag="item-3" src="/images/destination/image-mars.png" alt="Image of the planet Mars.">
-        <img data-slider-tag="item-4" src="/images/destination/image-titan.png" alt="Image of the moon Titan.">
+      <div class="dest-slider grid grid-cols-1" data-slider-selected="item-1">
+        <img class="w-44 sm:w-72 object-contain mx-auto" data-slider-tag="item-1" src="/images/destination/image-moon.png" alt="Image of the Moon.">
+        <img class="w-44 sm:w-72 object-contain mx-auto" data-slider-tag="item-2" src="/images/destination/image-europa.png" alt="Image of the moon Europa.">
+        <img class="w-44 sm:w-72 object-contain mx-auto" data-slider-tag="item-3" src="/images/destination/image-mars.png" alt="Image of the planet Mars.">
+        <img class="w-44 sm:w-72 object-contain mx-auto" data-slider-tag="item-4" src="/images/destination/image-titan.png" alt="Image of the moon Titan.">
         {# ctlr #}
-        <div class="dest-slider-ctrl flex items-center justify-center">
-          <ul class="flex gap-2">
+        <div class="dest-slider-ctrl font-sans-cond flex items-center justify-center my-7 tracking-wide">
+          <ul class="flex gap-7 text-sm md:text-base">
             <li>
               <input class="sr-only" type="radio" name="destinations" value="item-1" id="place-moon" checked="true">
-              <label class="dest-ctrl-tab text-white inline-block uppercase" for="place-moon">moon</label>
-            </li>
-            <li>
-              <input class="sr-only" type="radio" name="destinations" value="item-2" id="place-europa">
-              <label class="dest-ctrl-tab text-white inline-block uppercase" for="place-europa">europa</label>
+              <label class="dest-ctrl-tab pb-[0.571em]" for="place-moon">moon</label>
             </li>
             <li>
               <input class="sr-only" type="radio" name="destinations" value="item-3" id="place-mars">
-              <label class="dest-ctrl-tab text-white inline-block uppercase" for="place-mars">mars</label>
+              <label class="dest-ctrl-tab pb-[0.571em]" for="place-mars">mars</label>
+            </li>
+            <li>
+              <input class="sr-only" type="radio" name="destinations" value="item-2" id="place-europa">
+              <label class="dest-ctrl-tab pb-[0.571em]" for="place-europa">europa</label>
             </li>
             <li>
               <input class="sr-only" type="radio" name="destinations" value="item-4" id="place-titan">
-              <label class="dest-ctrl-tab text-white inline-block uppercase" for="place-titan">titan</label>
+              <label class="dest-ctrl-tab pb-[0.571em]" for="place-titan">titan</label>
             </li>
           </ul>
         </div>
         {# Details #}
-        <div data-slider-tag="item-1">
-          <h2>Moon</h2>
+        <div class="px-3 text-center" data-slider-tag="item-1">
+          <div>
+            <h2 class="font-serif text-head-2 uppercase">Moon</h2>
+            <p class="text-base leading-loose text-primary">See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+          </div>
+          {# DIVIDER #}
+          <div class="h-[1px] w-full my-8 bg-low-white"></div>
+          <div class="uppercase">
+            <div>
+              <h3 class="text-3xl mb-8 font-serif">
+                <span class="block mb-3 font-sans-cond text-sm tracking-wide text-primary">avg. distance</span>384,400 km</h3>
+            </div>
+            <div>
+              <h3 class="text-3xl mb-8 font-serif">
+                <span class="block mb-3 font-sans-cond text-sm tracking-wide text-primary">est. travel time</span>3 days</h3>
+            </div>
+          </div>
         </div>
-        <div data-slider-tag="item-2">
-          <h2>Europa</h2>
+        <div class="px-3 text-center" data-slider-tag="item-2">
+          <div>
+            <h2 class="font-serif text-head-2 uppercase">Europa</h2>
+            <p class="text-base leading-loose text-primary">The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover's dream. With an icy surface, it's perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.</p>
+          </div>
+          {# DIVIDER #}
+          <div class="h-[1px] w-full my-8 bg-low-white"></div>
+          <div class="uppercase">
+            <div>
+              <h3 class="text-3xl mb-8 font-serif">
+                <span class="block mb-3 font-sans-cond text-sm tracking-wide text-primary">avg. distance</span>628 mil. km</h3>
+            </div>
+            <div>
+              <h3 class="text-3xl mb-8 font-serif">
+                <span class="block mb-3 font-sans-cond text-sm tracking-wide text-primary">est. travel time</span>3 years</h3>
+            </div>
+          </div>
         </div>
-        <div data-slider-tag="item-3">
-          <h2>Mars</h2>
+        <div class="px-3 text-center" data-slider-tag="item-3">
+          <div>
+            <h2 class="font-serif text-head-2 uppercase">Mars</h2>
+            <p class="text-base leading-loose text-primary">Don't forget to pack your hiking boots. You'll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It's two and a half times the size of Everest!</p>
+          </div>
+          {# DIVIDER #}
+          <div class="h-[1px] w-full my-8 bg-low-white"></div>
+          <div class="uppercase">
+            <div>
+              <h3 class="text-3xl mb-8 font-serif">
+                <span class="block mb-3 font-sans-cond text-sm tracking-wide text-primary">avg. distance</span>225 mil. km</h3>
+            </div>
+            <div>
+              <h3 class="text-3xl mb-8 font-serif">
+                <span class="block mb-3 font-sans-cond text-sm tracking-wide text-primary">est. travel time</span>9 months</h3>
+            </div>
+          </div>
         </div>
-        <div data-slider-tag="item-4">
-          <h2>Titan</h2>
+        <div class="px-3 text-center" data-slider-tag="item-4">
+          <div>
+            <h2 class="font-serif text-head-2 uppercase">Titan</h2>
+            <p class="text-base leading-loose text-primary">The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.</p>
+          </div>
+          {# DIVIDER #}
+          <div class="h-[1px] w-full my-8 bg-low-white"></div>
+          <div class="uppercase">
+            <div>
+              <h3 class="text-3xl mb-8 font-serif">
+                <span class="block mb-3 font-sans-cond text-sm tracking-wide text-primary">avg. distance</span>1.6 bil. km</h3>
+            </div>
+            <div>
+              <h3 class="text-3xl mb-8 font-serif">
+                <span class="block mb-3 font-sans-cond text-sm tracking-wide text-primary">est. travel time</span>7 years</h3>
+            </div>
+          </div>
         </div>
       </div>
     </div>

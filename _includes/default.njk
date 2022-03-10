@@ -19,7 +19,7 @@
     {% block head %}{% endblock %}
   </head>
   <body>
-    <header class="grid grid-cols-nav-mobile fixed mt-0 xl:grid-cols-nav-desktop xl:mt-10 w-full">
+    <header class="grid grid-cols-nav-mobile fixed z-50 mt-0 xl:grid-cols-nav-desktop xl:mt-10 w-full">
       {# Desktop logo #}
       <a class="hidden xl:block self-center justify-self-center" href="/"><img src="/images/shared/logo.svg" alt="Brand logo"></a>
 
@@ -29,7 +29,7 @@
 
         {# Decor Bar ::before #}
 
-        <button class="flex justify-center relative z-50 col-end-[-1] md:hidden" aria-controls="main-nav" aria-expanded="false">
+        <button class="flex justify-center relative z-40 col-end-[-1] md:hidden" aria-controls="main-nav" aria-expanded="false">
           <img class="object-fit" src="/images/shared/icon-hamburger.svg" alt="Closed menu icon">
           <img class="object-fit hidden" src="/images/shared/icon-close.svg" alt="Open menu icon">
         </button>
