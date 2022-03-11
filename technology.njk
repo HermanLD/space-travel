@@ -1,9 +1,9 @@
 {% extends "_includes/default.njk" %}
 {% block title %}Space Tours | Tech{% endblock %}
 {% block content %}
-  <main class="grid-cols-nav-mobile w-full pt-24 xl:pt-24 text-white bg-tech-mobile bg-cover bg-no-repeat md:bg-tech-tablet xl:h-screen xl:grid-cols-tech-desktop xl:bg-tech-desktop">
-    <div>
-      <h1 class="numbered-heading mb-header-bottom text-head-4 text-center xl:text-left uppercase">
+  <main class="grid-cols-nav-mobile h-screen w-full pt-24 xl:pt-24 text-white bg-tech-mobile bg-cover bg-no-repeat md:bg-tech-tablet xl:grid-cols-tech-desktop xl:bg-tech-desktop">
+    <div class="xl:col-start-2">
+      <h1 class="numbered-heading mb-header-bottom xl:mb-0 font-sans-cond text-primary text-head-5 text-center sm:text-left uppercase">
         <span>03</span>Space launch 101</h1>
 
       <div class="tech-slider" data-slider-selected="item-1">
@@ -32,20 +32,20 @@
         </div>
         {# Details #}
         <div data-slider-tag="item-1">
-          <h2>
-            <span class="block">the terminology...</span>launch vehicle</h2>
+          <h2 class="text-serif uppercase">
+            <span class="block text-sans-cond text-primary">the terminology...</span>launch vehicle</h2>
 
           <p class="text-base">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
         </div>
         <div data-slider-tag="item-2">
-          <h2>
-            <span class="block">the terminology...</span>Spaceport</h2>
+          <h2 class="text-serif uppercase">
+            <span class="block text-sans-cond text-primary">the terminology...</span>Spaceport</h2>
 
           <p class="text-base">A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.</p>
         </div>
         <div data-slider-tag="item-3">
-          <h2>
-            <span class="block">the terminology...</span>Space capsule</h2>
+          <h2 class="text-serif uppercase">
+            <span class="block text-sans-cond text-primary">the terminology...</span>Space capsule</h2>
 
           <p class="text-base">A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.</p>
         </div>

@@ -16,7 +16,7 @@ module.exports = {
       },
       colors: {
         "low-dark": "hsl(230, 35%, 7%, 0.95)",
-        "low-white": "hsl(0, 0%, 100%, 0.35)",
+        "low-white": "hsl(0, 0%, 100%, 0.25)",
         primary: "#D0D6F9",
         dark: "#0B0D17",
         gray: "#979797",

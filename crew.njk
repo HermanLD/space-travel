@@ -1,18 +1,20 @@
 {% extends "_includes/default.njk" %}
 {% block title %}Space Tours | Crew{% endblock %}
 {% block content %}
-  <main class="grid-cols-nav-mobile w-full text-white pt-24 xl:pt-24 bg-crew-mobile bg-cover bg-no-repeat md:bg-crew-tablet xl:h-screen xl:grid-cols-nav-desktop xl:bg-crew-desktop">
-    <div>
-      <h1 class="numbered-heading mb-header-bottom text-head-4 text-center xl:text-left uppercase">
+  <main class="grid grid-cols-nav-mobile h-screen w-full sm:items-end xl:justify-center text-white pt-24 xl:pt-24 bg-crew-mobile bg-cover bg-no-repeat md:bg-crew-tablet xl:grid-cols-nav-desktop xl:bg-crew-desktop">
+    <div class="px-3 xl:col-start-2">
+      <h1 class="numbered-heading mb-header-bottom xl:mb-10 font-sans-cond text-primary text-head-5 text-center sm:text-left uppercase">
         <span>02</span>Meet your crew</h1>
 
-      <div class="crew-slider" data-slider-selected="item-1">
-        <img data-slider-tag="item-1" src="/images/crew/image-douglas-hurley.png" alt="Douglas Hurley">
-        <img data-slider-tag="item-2" src="/images/crew/image-mark-shuttleworth.png" alt="Mark Shuttleworth">
-        <img data-slider-tag="item-3" src="/images/crew/image-victor-glover.png" alt="Victor Glover">
-        <img data-slider-tag="item-4" src="/images/crew/image-anousheh-ansari.png" alt="Anousheh Ansari">
+      <div class="crew-slider grid grid-cols-1 justify-items-center mx-auto max-w-lg xl:max-w-none xl:grid-cols-2 xl:grid-rows-2" data-slider-selected="item-1">
+        <img class="h-56 sm:h-[532px] object-contain sm:row-start-3 xl:col-start-2 xl:row-span-2 xl:row-start-auto" data-slider-tag="item-1" src="/images/crew/image-douglas-hurley.png" alt="Douglas Hurley">
+        <img class="h-56 sm:h-[532px] object-contain sm:row-start-3 xl:col-start-2 xl:row-span-2" data-slider-tag="item-2" src="/images/crew/image-mark-shuttleworth.png" alt="Mark Shuttleworth">
+        <img class="h-56 sm:h-[532px] object-contain sm:row-start-3 xl:col-start-2 xl:row-span-2" data-slider-tag="item-3" src="/images/crew/image-victor-glover.png" alt="Victor Glover">
+        <img class="h-56 sm:h-[532px] object-contain sm:row-start-3 xl:col-start-2 xl:row-span-2" data-slider-tag="item-4" src="/images/crew/image-anousheh-ansari.png" alt="Anousheh Ansari">
+        {# DIVIDER #}
+        <div class="h-[1px] w-full mb-6 bg-low-white sm:hidden"></div>
         {# ctlr #}
-        <div class="crew-slider-ctrl flex items-center justify-center">
+        <div class="crew-slider-ctrl sm:row-start-2 flex items-center justify-center mb-6 sm:mt-6 xl:col-start-1 xl:row-start-2">
           <ul class="flex text-base xl:text-[2rem]">
             <li>
               <input class="sr-only" type="radio" name="crew" value="item-1" id="crew-1" checked="true">
@@ -37,25 +39,25 @@
           </ul>
         </div>
         {# Details #}
-        <div data-slider-tag="item-1" class="text-center">
-          <h2>
-            <span class="block">Commander</span>Douglas Hurley</h2>
-          <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+        <div data-slider-tag="item-1" class="text-center xl:text-left xl:col-start-1 xl:row-start-1">
+          <h2 class="font-serif text-head-3 mb-4 uppercase">
+            <span class="block text-head-4 text-gray">Commander</span>Douglas Hurley</h2>
+          <p class="text-base leading-loose text-primary">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
         </div>
-        <div data-slider-tag="item-2" class="text-center">
-          <h2>
-            <span class="block">Mission Specialist</span>Mark Shuttleworth</h2>
-          <p>Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.</p>
+        <div data-slider-tag="item-2" class="text-center xl:text-left xl:col-start-1 xl:row-start-1">
+          <h2 class="font-serif text-head-3 mb-4 uppercase whitespace-nowrap xl:text-[48px]">
+            <span class="block text-head-4 text-gray">Mission Specialist</span>Mark Shuttleworth</h2>
+          <p class="text-base leading-loose text-primary">Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.</p>
         </div>
-        <div data-slider-tag="item-3" class="text-center">
-          <h2>
-            <span class="block">Pilot</span>Victor Glover</h2>
-          <p>Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.</p>
+        <div data-slider-tag="item-3" class="text-center xl:text-left xl:col-start-1 xl:row-start-1">
+          <h2 class="font-serif text-head-3 mb-4 uppercase">
+            <span class="block text-head-4 text-gray">Pilot</span>Victor Glover</h2>
+          <p class="text-base leading-loose text-primary">Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.</p>
         </div>
-        <div data-slider-tag="item-4" class="text-center">
-          <h2>
-            <span class="block">Flight Engineer</span>Anousheh Ansari</h2>
-          <p>Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.</p>
+        <div data-slider-tag="item-4" class="text-center xl:text-left xl:col-start-1 xl:row-start-1">
+          <h2 class="font-serif text-head-3 mb-4 uppercase">
+            <span class="block text-head-4 text-gray">Flight Engineer</span>Anousheh Ansari</h2>
+          <p class="text-base leading-loose text-primary">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.</p>
         </div>
       </div>
     </div>
